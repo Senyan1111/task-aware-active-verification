@@ -46,21 +46,13 @@ validation/test split, utility model, confidence intervals, and limitations.
 
 ## Repository guide
 
-The numbered scripts form a progressive experimental narrative:
+The public demo keeps only the two scripts needed to understand and reproduce
+the main result:
 
 | Script | Purpose |
 |---|---|
-| `scene_01_hypotheses.py` | Construct three hidden-shape hypotheses. |
-| `scene_02_occluded_observation.py` | Verify that they share the same partial observation. |
-| `scene_03_task_decision.py` | Connect geometric uncertainty to task utility. |
-| `scene_04_view_selection.py` | Compare candidate observations using decision value. |
-| `scene_05_parameter_sweep.py` | Map act/observe/stop decision regions. |
-| `scene_06_policy_comparison.py` | Run the first reproducible policy comparison. |
-| `scene_07_noisy_observation.py` | Add imperfect observations and Bayesian updates. |
-| `scene_08_credible_policy_evaluation.py` | Evaluate multiple seeds with 95% confidence intervals. |
-| `scene_09_depth_belief_update.py` | Close the loop using rendered depth-fit evidence. |
-| `scene_10_task_sufficiency_noise_sweep.py` | Test task sufficiency under depth noise. |
-| `scene_11_parameterized_shape_family.py` | Build the full geometry-driven demo and animation. |
+| `demo_active_verification.py` | Run the geometry-driven active-verification demo and generate the animation. |
+| `evaluate_policy.py` | Evaluate the five policies over multiple random seeds with 95% confidence intervals. |
 
 ## Quick start
 
@@ -75,20 +67,20 @@ python -m pip install -r requirements.txt
 Run the main research demo without opening interactive windows:
 
 ```bash
-python scene_11_parameterized_shape_family.py --no-show
+python demo_active_verification.py --no-show
 ```
 
 This regenerates the figures, CSV traces, 1080p MP4, and animated GIF under
 `outputs/`. To skip video generation while iterating on the static figures:
 
 ```bash
-python scene_11_parameterized_shape_family.py --no-show --no-gif
+python demo_active_verification.py --no-show --no-gif
 ```
 
 Run the controlled policy evaluation:
 
 ```bash
-python scene_08_credible_policy_evaluation.py --no-show
+python evaluate_policy.py --no-show
 ```
 
 ## Selected outputs
