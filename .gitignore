@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+.conda/
+
+# Local tooling and caches
+.matplotlib/
+.pip-temp/
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Keep only curated, reproducible showcase outputs in version control.
+outputs/*
+!outputs/research_demo_active_verification.gif
+!outputs/research_demo_active_verification_1080p.mp4
+!outputs/research_demo_animation_keyframe.png
+!outputs/research_demo_hero_figure.png
+!outputs/credible_policy_comparison.png
+!outputs/credible_policy_summary.csv
+!outputs/research_demo_geometry_trace.csv
+
